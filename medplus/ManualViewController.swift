@@ -3,7 +3,7 @@ import UIKit
 class ManualViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
 
     
-    @IBOutlet weak var testLabel: UILabel!
+    
     
     // 選択肢
     let dataList = ["1時間","2時間","3時間","4時間","5時間","6時間","7時間","8時間","9時間","10時間","11時間","12時間","13時間","14時間","15時間","16時間","17時間","18時間","19時間","20時間","21時間","22時間","23時間"]
@@ -12,7 +12,13 @@ class ManualViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let SendButton = UIButton(frame: CGRect(x: self.view.frame.width/3, y: self.view.frame.height/3*2, width: self.view.frame.width/3, height: 100))
         
+        SendButton.setTitle("送信", for: .normal)
+        SendButton.setTitleColor(UIColor.black, for: .normal)
+        // イベントを追加する
+        SendButton.addTarget(self, action: #selector(ManualViewController.TappedSendButton(sender:)), for: .touchUpInside)
+
         // ピッカーの作成
         let picker = UIPickerView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 100))
         picker.center = self.view.center
@@ -25,6 +31,9 @@ class ManualViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         picker.selectRow(2, inComponent: 1, animated: true)
         
         self.view.addSubview(picker)
+        self.view.addSubview(SendButton)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +42,8 @@ class ManualViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     }
  
     // UIPickerViewDataSource
+//------------------------------------< Picker >--------------------------------
+
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         // 表示する列数
@@ -70,4 +81,10 @@ class ManualViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         }
         print(dataList2[row])
     }
+//------------------------------------<Picker>--------------------------------
+
+    @objc internal func TappedSendButton(sender: UIButton) {
+        print("タップされました")
+    }
+
 }
