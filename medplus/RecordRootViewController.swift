@@ -22,9 +22,9 @@ class RecordRootViewController: UIViewController {
     }
     
     func setup(){
-//        ManualVC.view.backgroundColor = UIColor.cyan
-//        TimerVC.view.backgroundColor = UIColor.magenta
-//        StopWatchVC.view.backgroundColor = UIColor.blue
+        ManualVC.view.backgroundColor = UIColor.cyan
+        TimerVC.view.backgroundColor = UIColor.magenta
+        StopWatchVC.view.backgroundColor = UIColor.blue
         
         self.view.addSubview(StopWatchVC.view)
         self.view.addSubview(TimerVC.view)
