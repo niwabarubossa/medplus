@@ -12,6 +12,7 @@ class ManualViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor.darkGray
         let SendButton = UIButton(frame: CGRect(x: self.view.frame.width/3, y: self.view.frame.height/3*2, width: self.view.frame.width/3, height: 100))
         
         SendButton.setTitle("送信", for: .normal)

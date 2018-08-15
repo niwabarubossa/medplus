@@ -2,12 +2,13 @@ import UIKit
 
 class RecordRootViewController: UIViewController {
     
+
+
+    @IBOutlet weak var MySegmentedControl: UISegmentedControl!
+
     var ManualVC:ManualViewController = ManualViewController()
     var TimerVC:TimerViewController = TimerViewController()
     var StopWatchVC:StopWatchViewController = StopWatchViewController()
-
-    @IBOutlet weak var MySegmentedControl: UISegmentedControl!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +23,10 @@ class RecordRootViewController: UIViewController {
     }
     
     func setup(){
-        ManualVC.view.backgroundColor = UIColor.cyan
-        TimerVC.view.backgroundColor = UIColor.magenta
-        StopWatchVC.view.backgroundColor = UIColor.blue
+
+        MySegmentedControl.setTitle("手動入力", forSegmentAt: 0)
+        MySegmentedControl.setTitle("タイマー", forSegmentAt: 1)
+        MySegmentedControl.setTitle("ストップウォッチ", forSegmentAt: 2)
         
         self.view.addSubview(StopWatchVC.view)
         self.view.addSubview(TimerVC.view)

@@ -33,14 +33,51 @@
                     <view key="view" contentMode="scaleToFill" id="fLm-Ah-FAg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="サンプルアイコン" translatesAutoresizingMaskIntoConstraints="NO" id="yr2-uC-v0S">
+                                <rect key="frame" x="20" y="40" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0q1-KE-C88"/>
+                                    <constraint firstAttribute="width" constant="60" id="0tS-So-4G7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ryogo Niwa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfP-OP-yCa">
+                                <rect key="frame" x="105" y="60" width="91" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlu-Ix-A73">
+                                <rect key="frame" x="63" y="108" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="友達　36人"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xtz-nJ-cHz">
+                                <rect key="frame" x="214" y="108" width="101" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="グループ　3つ"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="不安を軽減するためと、集中力を鍛えるために瞑想を始めました！　メンタリストDaiGoさんとパレオさんのブログをみて日々勉強をしております。　今現在は朝30分の瞑想習慣化に成功！　6000~7000時間の瞑想時間を目標に頑張って行きます！" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mjR-VN-RCX">
+                                <rect key="frame" x="16" y="140" width="343" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92615586361347424" green="1" blue="0.99893941466730063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yr2-uC-v0S" firstAttribute="leading" secondItem="jvl-gP-wJE" secondAttribute="leading" constant="20" id="8Pe-Hc-XQ9"/>
+                            <constraint firstItem="yr2-uC-v0S" firstAttribute="top" secondItem="jvl-gP-wJE" secondAttribute="top" constant="20" id="erM-tR-KkJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jvl-gP-wJE"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="マイページ" image="マイページ" id="sjh-Xl-CVx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="03r-dl-U82" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="505" y="-190"/>
+            <point key="canvasLocation" x="504.80000000000001" y="-190.25487256371815"/>
         </scene>
         <!--記録する-->
         <scene sceneID="APw-5K-o0j">
@@ -90,12 +127,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Quk-92-lhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1468" y="636"/>
+            <point key="canvasLocation" x="1452" y="636"/>
         </scene>
         <!--Manual View Controller-->
         <scene sceneID="DbH-I0-85c">
             <objects>
-                <viewController id="Dlo-Nf-DzW" customClass="ManualViewController" customModule="medplus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Manual" id="Dlo-Nf-DzW" customClass="ManualViewController" customModule="medplus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F3Y-ZF-EkP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,32 +147,76 @@
         <!--Timer View Controller-->
         <scene sceneID="fB8-09-fn0">
             <objects>
-                <viewController id="yA2-uR-kYh" customClass="TimerViewController" customModule="medplus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Timer" id="yA2-uR-kYh" customClass="TimerViewController" customModule="medplus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="46R-48-jaG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEB-Bx-aaT">
+                                <rect key="frame" x="113" y="77" width="148" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="jJO-PF-3CP"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3e-EM-6xj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3567" y="663"/>
+            <point key="canvasLocation" x="2585" y="1399"/>
         </scene>
         <!--Stop Watch View Controller-->
         <scene sceneID="g3V-AH-TMh">
             <objects>
-                <viewController id="ITr-WM-d63" customClass="StopWatchViewController" customModule="medplus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StopWatch" id="ITr-WM-d63" customClass="StopWatchViewController" customModule="medplus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y9z-co-05W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="stopwatch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qN-1s-Q7U">
+                                <rect key="frame" x="89" y="48" width="197" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goS-TY-dfu">
+                                <rect key="frame" x="109" y="199" width="157" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzQ-FS-VnO">
+                                <rect key="frame" x="77" y="523" width="53" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="start"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPc-Q8-yr1">
+                                <rect key="frame" x="246" y="523" width="56" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="stop"/>
+                                <connections>
+                                    <action selector="stopTimer:" destination="ITr-WM-d63" eventType="touchUpInside" id="SoK-Ge-uap"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="wIf-WR-Bbt"/>
                     </view>
+                    <connections>
+                        <outlet property="StartButton" destination="HzQ-FS-VnO" id="R1O-If-P9e"/>
+                        <outlet property="startButton" destination="lPc-Q8-yr1" id="l9V-gQ-Sh1"/>
+                        <outlet property="stopButton" destination="lPc-Q8-yr1" id="Z9I-iB-bb1"/>
+                        <outlet property="timerDisplay" destination="goS-TY-dfu" id="qHU-px-HeI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPm-Ar-g0b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4582" y="663"/>
+            <point key="canvasLocation" x="3582" y="1621"/>
         </scene>
         <!--タイムライン-->
         <scene sceneID="I9t-Uf-EtT">
@@ -190,22 +271,9 @@
             </objects>
             <point key="canvasLocation" x="-1276" y="439"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="p1M-qm-2fT">
-            <objects>
-                <viewController id="sZe-r8-2ra" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7re-G9-KuT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Gzs-ZG-Vtl"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hlr-vC-PN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
+        <image name="サンプルアイコン" width="60" height="60"/>
         <image name="タイムライン" width="30" height="30"/>
         <image name="マイページ" width="30" height="30"/>
         <image name="成果一覧" width="30" height="30"/>
