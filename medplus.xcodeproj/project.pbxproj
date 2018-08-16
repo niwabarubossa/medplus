@@ -16,6 +16,8 @@
 		54AA633F2120F783001D3608 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AA633E2120F783001D3608 /* TimerViewController.swift */; };
 		54AA63412120F78C001D3608 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AA63402120F78C001D3608 /* StopWatchViewController.swift */; };
 		54AA63432120F87B001D3608 /* RecordRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AA63422120F87B001D3608 /* RecordRootViewController.swift */; };
+		54AA63452123FEEA001D3608 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AA63442123FEEA001D3608 /* MyPageViewController.swift */; };
+		9A56A88B5B1DC3163374B8A6 /* Pods_medplus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB65EBC4A1ADEE9010E167AE /* Pods_medplus.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,10 @@
 		54AA633E2120F783001D3608 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		54AA63402120F78C001D3608 /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 		54AA63422120F87B001D3608 /* RecordRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRootViewController.swift; sourceTree = "<group>"; };
+		54AA63442123FEEA001D3608 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		67BB323997AD50EF465770FE /* Pods-medplus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medplus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-medplus/Pods-medplus.debug.xcconfig"; sourceTree = "<group>"; };
+		CB65EBC4A1ADEE9010E167AE /* Pods_medplus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_medplus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F20C0753960273296B616A2B /* Pods-medplus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medplus.release.xcconfig"; path = "Pods/Target Support Files/Pods-medplus/Pods-medplus.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A56A88B5B1DC3163374B8A6 /* Pods_medplus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +55,8 @@
 			children = (
 				54AA6329211FBE0C001D3608 /* medplus */,
 				54AA6328211FBE0C001D3608 /* Products */,
+				96D06BB947EFA9E64B17B21C /* Pods */,
+				96A36654CF191BE21644C7AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +74,7 @@
 				54AA632A211FBE0C001D3608 /* AppDelegate.swift */,
 				54AA632C211FBE0C001D3608 /* ViewController.swift */,
 				54AA632E211FBE0C001D3608 /* Main.storyboard */,
+				54AA63442123FEEA001D3608 /* MyPageViewController.swift */,
 				54AA63422120F87B001D3608 /* RecordRootViewController.swift */,
 				54AA633C2120F777001D3608 /* ManualViewController.swift */,
 				54AA633E2120F783001D3608 /* TimerViewController.swift */,
@@ -76,6 +86,23 @@
 			path = medplus;
 			sourceTree = "<group>";
 		};
+		96A36654CF191BE21644C7AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB65EBC4A1ADEE9010E167AE /* Pods_medplus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96D06BB947EFA9E64B17B21C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67BB323997AD50EF465770FE /* Pods-medplus.debug.xcconfig */,
+				F20C0753960273296B616A2B /* Pods-medplus.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54AA6339211FBE16001D3608 /* Build configuration list for PBXNativeTarget "medplus" */;
 			buildPhases = (
+				2339D6EF0656B0E4F6CF2EF6 /* [CP] Check Pods Manifest.lock */,
 				54AA6323211FBE0C001D3608 /* Sources */,
 				54AA6324211FBE0C001D3608 /* Frameworks */,
 				54AA6325211FBE0C001D3608 /* Resources */,
+				B8A5C996F28F85F99563ADC7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +171,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2339D6EF0656B0E4F6CF2EF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-medplus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8A5C996F28F85F99563ADC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-medplus/Pods-medplus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-medplus/Pods-medplus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		54AA6323211FBE0C001D3608 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -149,6 +217,7 @@
 			files = (
 				54AA633F2120F783001D3608 /* TimerViewController.swift in Sources */,
 				54AA632D211FBE0C001D3608 /* ViewController.swift in Sources */,
+				54AA63452123FEEA001D3608 /* MyPageViewController.swift in Sources */,
 				54AA633D2120F777001D3608 /* ManualViewController.swift in Sources */,
 				54AA632B211FBE0C001D3608 /* AppDelegate.swift in Sources */,
 				54AA63412120F78C001D3608 /* StopWatchViewController.swift in Sources */,
@@ -294,15 +363,13 @@
 		};
 		54AA633A211FBE16001D3608 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67BB323997AD50EF465770FE /* Pods-medplus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59F2M7UA57;
 				INFOPLIST_FILE = medplus/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.ryogo.niwa.medplus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -312,15 +379,13 @@
 		};
 		54AA633B211FBE16001D3608 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F20C0753960273296B616A2B /* Pods-medplus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59F2M7UA57;
 				INFOPLIST_FILE = medplus/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.ryogo.niwa.medplus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

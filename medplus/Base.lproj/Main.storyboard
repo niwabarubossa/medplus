@@ -27,57 +27,92 @@
             <point key="canvasLocation" x="505" y="1657"/>
         </scene>
         <!--マイページ-->
-        <scene sceneID="CLh-u6-v3I">
+        <scene sceneID="XOU-cY-Lfo">
             <objects>
-                <viewController id="20z-xD-9xn" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fLm-Ah-FAg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="nuz-BS-fWw" customClass="MyPageViewController" customModule="medplus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SKy-TU-ox8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="サンプルアイコン" translatesAutoresizingMaskIntoConstraints="NO" id="yr2-uC-v0S">
-                                <rect key="frame" x="20" y="40" width="60" height="60"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iaj-PK-izQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="931"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="サンプルアイコン" translatesAutoresizingMaskIntoConstraints="NO" id="yr2-uC-v0S">
+                                        <rect key="frame" x="20" y="20" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Nka-XF-14e"/>
+                                            <constraint firstAttribute="height" constant="60" id="hhS-ob-pb7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ryogo Niwa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfP-OP-yCa">
+                                        <rect key="frame" x="110" y="40" width="91" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="D3k-wD-7Ue"/>
+                                            <constraint firstAttribute="width" constant="91" id="OsP-2c-ud7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlu-Ix-A73">
+                                        <rect key="frame" x="70" y="88" width="80" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="RRn-qH-tBD"/>
+                                            <constraint firstAttribute="height" constant="30" id="xSM-ed-YDg"/>
+                                        </constraints>
+                                        <state key="normal" title="友達　36人"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xtz-nJ-cHz">
+                                        <rect key="frame" x="209" y="88" width="101" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="EpC-52-REG"/>
+                                            <constraint firstAttribute="width" constant="101" id="ZSI-ty-XFM"/>
+                                        </constraints>
+                                        <state key="normal" title="グループ　3つ"/>
+                                    </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cvt-oT-5QF" customClass="BarChartView" customModule="Charts">
+                                        <rect key="frame" x="16" y="233" width="343" height="334"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="不安を軽減するためと、集中力を鍛えるために瞑想を始めました！　メンタリストDaiGoさんとパレオさんのブログをみて日々勉強をしております。　今現在は朝30分の瞑想習慣化に成功！　6000~7000時間の瞑想時間を目標に頑張って行きます！" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mjR-VN-RCX">
+                                        <rect key="frame" x="16" y="126" width="343" height="98"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.92615586361347424" green="1" blue="0.99893941466730063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="0q1-KE-C88"/>
-                                    <constraint firstAttribute="width" constant="60" id="0tS-So-4G7"/>
+                                    <constraint firstItem="VfP-OP-yCa" firstAttribute="leading" secondItem="yr2-uC-v0S" secondAttribute="trailing" constant="30" id="2wO-VM-aDg"/>
+                                    <constraint firstItem="yr2-uC-v0S" firstAttribute="leading" secondItem="iaj-PK-izQ" secondAttribute="leading" constant="20" id="6TW-VH-4Pz"/>
+                                    <constraint firstItem="yr2-uC-v0S" firstAttribute="top" secondItem="iaj-PK-izQ" secondAttribute="top" constant="20" id="NCF-N8-c55"/>
+                                    <constraint firstItem="Xtz-nJ-cHz" firstAttribute="top" secondItem="iaj-PK-izQ" secondAttribute="top" constant="98" id="SZM-ds-lY6"/>
+                                    <constraint firstItem="Xtz-nJ-cHz" firstAttribute="leading" secondItem="mlu-Ix-A73" secondAttribute="trailing" constant="80" id="WLf-16-upd"/>
+                                    <constraint firstItem="VfP-OP-yCa" firstAttribute="top" secondItem="iaj-PK-izQ" secondAttribute="top" constant="40" id="cP9-2x-kfI"/>
+                                    <constraint firstItem="mlu-Ix-A73" firstAttribute="top" secondItem="yr2-uC-v0S" secondAttribute="bottom" constant="18" id="fc3-yg-AAm"/>
+                                    <constraint firstItem="mlu-Ix-A73" firstAttribute="leading" secondItem="iaj-PK-izQ" secondAttribute="leading" constant="56" id="o8l-iq-SLP"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ryogo Niwa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfP-OP-yCa">
-                                <rect key="frame" x="105" y="60" width="91" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlu-Ix-A73">
-                                <rect key="frame" x="63" y="108" width="80" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="友達　36人"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xtz-nJ-cHz">
-                                <rect key="frame" x="214" y="108" width="101" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="グループ　3つ"/>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="不安を軽減するためと、集中力を鍛えるために瞑想を始めました！　メンタリストDaiGoさんとパレオさんのブログをみて日々勉強をしております。　今現在は朝30分の瞑想習慣化に成功！　6000~7000時間の瞑想時間を目標に頑張って行きます！" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mjR-VN-RCX">
-                                <rect key="frame" x="16" y="140" width="343" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.92615586361347424" green="1" blue="0.99893941466730063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yr2-uC-v0S" firstAttribute="leading" secondItem="jvl-gP-wJE" secondAttribute="leading" constant="20" id="8Pe-Hc-XQ9"/>
-                            <constraint firstItem="yr2-uC-v0S" firstAttribute="top" secondItem="jvl-gP-wJE" secondAttribute="top" constant="20" id="erM-tR-KkJ"/>
+                            <constraint firstItem="iaj-PK-izQ" firstAttribute="top" secondItem="YVQ-IQ-VG1" secondAttribute="top" id="1iK-CX-ze7"/>
+                            <constraint firstItem="iaj-PK-izQ" firstAttribute="bottom" secondItem="YVQ-IQ-VG1" secondAttribute="bottom" id="3Zn-6C-P2O"/>
+                            <constraint firstItem="YVQ-IQ-VG1" firstAttribute="trailing" secondItem="iaj-PK-izQ" secondAttribute="trailing" id="dJn-XT-321"/>
+                            <constraint firstItem="iaj-PK-izQ" firstAttribute="leading" secondItem="YVQ-IQ-VG1" secondAttribute="leading" id="fJr-93-GeS"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="jvl-gP-wJE"/>
+                        <viewLayoutGuide key="safeArea" id="YVQ-IQ-VG1"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="マイページ" image="マイページ" id="sjh-Xl-CVx"/>
+                    <tabBarItem key="tabBarItem" title="マイページ" image="マイページ" id="Nhz-ei-mYs"/>
+                    <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="barChartView" destination="Cvt-oT-5QF" id="Z2W-77-KEr"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="03r-dl-U82" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePB-SS-k3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="504.80000000000001" y="-190.25487256371815"/>
+            <point key="canvasLocation" x="1196" y="-206.89655172413794"/>
         </scene>
         <!--記録する-->
         <scene sceneID="APw-5K-o0j">
@@ -261,7 +296,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="AO8-I7-QKf" kind="relationship" relationship="viewControllers" id="3Px-gk-eHr"/>
-                        <segue destination="20z-xD-9xn" kind="relationship" relationship="viewControllers" id="wJl-bT-dxS"/>
+                        <segue destination="nuz-BS-fWw" kind="relationship" relationship="viewControllers" id="bXg-jS-jlB"/>
                         <segue destination="eUL-Sf-32g" kind="relationship" relationship="viewControllers" id="Q3k-cv-gXc"/>
                         <segue destination="ImR-dD-by3" kind="relationship" relationship="viewControllers" id="zY2-5K-Lyp"/>
                         <segue destination="YXe-ch-gYM" kind="relationship" relationship="viewControllers" id="8bH-Ls-Cwg"/>
